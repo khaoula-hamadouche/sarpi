@@ -61,7 +61,7 @@ const Page = async () => {
       
       <section className="dark:bg-darkmode">  
         <div className="container upcoming">
-          <BoxSlider/>
+          {/*  <BoxSlider/>*/}
           <Schedules/>        
         </div>
       </section>      
