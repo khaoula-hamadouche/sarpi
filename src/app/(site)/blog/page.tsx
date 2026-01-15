@@ -9,14 +9,14 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
     const breadcrumbLinks = [
-        { href: "/", text: "Home" },
-        { href: "/blog", text: "Blog" },
+        { href: "/", text: "Accueil" },
+        { href: "/blog", text: "Projets realisés" },
     ];
     return (
         <>
             <HeroSub
-                title="Blog"
-                description="Discover a wealth of insightful materials meticulously crafted to provide you with a comprehensive understanding of the latest trends."
+                title="Projets realisés"
+                description="Découvrez nos projets réalisés."
                 breadcrumbLinks={breadcrumbLinks}
             />
             <BlogList />

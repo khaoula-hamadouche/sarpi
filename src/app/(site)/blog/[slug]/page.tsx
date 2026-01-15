@@ -4,7 +4,6 @@
 import { getAllPosts, getPostBySlug, getPostSlugs } from "@/utils/markdown";
 import TicketSection from "@/components/Home/TicketSection";
 import markdownToHtml from "@/utils/markdownToHtml";
-import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,12 +13,15 @@ type Props = {
 
 export async function generateMetadata({ params }: any) {
     const data = await params;
-    const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+    const posts = getAllPosts(["title", "excerpt", "coverImage","authorImage", "slug" ,"excerpt" ]);
     const post = getPostBySlug(data.slug, [
         "title",
         "author",
         "content",
         "metadata",
+        "coverImage",
+        "excerpt" ,
+      
     ]);
 
     const siteName = process.env.SITE_NAME || "Your Site Name";
@@ -67,14 +69,16 @@ export async function generateMetadata({ params }: any) {
 
 export default async function Post({ params }: any) {
     const data = await params;
-    const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
+    const posts = getAllPosts(["title", "date", "excerpt", "coverImage","authorImage", "author", "slug" ,"excerpt"  ]);
     const post = getPostBySlug(data.slug, [
         "title",
         "author",
         "authorImage",
         "content",
         "coverImage",
+        "author",
         "date",
+        "excerpt" ,
     ]);
 
     const content = await markdownToHtml(post.content || "");
@@ -83,37 +87,34 @@ export default async function Post({ params }: any) {
         <>
             <section className=" relative pt-44">
                 <div className="container mx-auto">
-                    <div className="grid md:grid-cols-12 grid-cols-1 items-center">
                         <div className="col-span-8">
-                            <div className="flex flex-col sm:flex-row">
-                                <span className="text-base text-midnight_text font-medium dark:text-white pr-7 border-r border-solid border-gray dark:border-white w-fit">
-                                    {format(new Date(post.date), "dd MMM yyyy")}
-                                </span>
-                                <span className="text-base text-midnight_text font-medium dark:text-white sm:pl-7 pl-0 w-fit">
-                                    13 Comments
-                                </span>
-                            </div>
+                             <div className="flex items-center gap-4 mb-8">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                        src={post.authorImage}
+                        alt={post.author}
+                        width={48}
+                        height={48}
+                        quality={100}
+                        className="w-full h-full object-cover"
+                    />
+                    
+                </div>
+                <div className="flex flex-col gap-1">
+                 <span className="text-base text-midnight_text font-medium dark:text-white">
+                   {post.author}
+                 </span>
+                 <span className="text-base text-midnight_text font-medium dark:text-white">
+                   {post.excerpt}
+                 </span>
+               </div>
+
+            </div>
                             <h2 className="text-midnight_text dark:text-white pt-7">
                                 {post.title}
                             </h2>
-                        </div>
-                        <div className="flex items-center md:justify-center justify-start gap-6 col-span-4 pt-4 md:pt-0">
-                            <Image
-                                src={post.authorImage}
-                                alt="image"
-                                className="bg-no-repeat bg-contain inline-block rounded-full !w-20 !h-20"
-                                width={40}
-                                height={40}
-                                layout="responsive"
-                                quality={100}
-                            />
-                            <div className="">
-                                <span className="text-[22px] leading-[1.2] font-bold text-midnight_text dark:text-white">
-                                    Silicaman
-                                </span>
-                                <p className="text-xl text-gray dark:text-white">Author</p>
-                            </div>
-                        </div>
+                     
+                     
                     </div>
                 </div>
             </section>
@@ -145,11 +146,11 @@ export default async function Post({ params }: any) {
                                                     className="wow fadeInUp relative mb-5 text-2xl dark:text-white text-black  sm:text-[28px] leading-[1.2]"
                                                     data-wow-delay=".1s"
                                                 >
-                                                    Share
+                                                    Partager
                                                 </h2>
                                                 <div className="flex gap-4 flex-col">
                                                     <div className="bg-[#526fa3] py-4 px-6 text-xl rounded-lg text-white">
-                                                        <Link href="#" className="flex items-center ">
+                                                        <Link href="https://www.facebook.com/profile.php?id=100063505513109" className="flex items-center ">
                                                             <svg
                                                                 className="svg-inline--fa fa-facebook-f me-3"
                                                                 aria-hidden="true"
@@ -170,30 +171,9 @@ export default async function Post({ params }: any) {
                                                             Facebook
                                                         </Link>
                                                     </div>
-                                                    <div className="bg-[#46C4FF] py-4 px-6 text-xl rounded-lg text-white">
-                                                        <Link href="#" className="flex items-center ">
-                                                            <svg
-                                                                className="svg-inline--fa fa-twitter me-3"
-                                                                aria-hidden="true"
-                                                                focusable="false"
-                                                                data-prefix="fab"
-                                                                data-icon="twitter"
-                                                                role="img"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                viewBox="0 0 512 512"
-                                                                height="21.5px"
-                                                                width="25px"
-                                                            >
-                                                                <path
-                                                                    fill="currentColor"
-                                                                    d="M459.4 151.7c.325 4.548.325 9.097.325 13.745 0 140.966-107.416 303.213-303.213 303.213-60.452 0-116.426-17.781-163.725-48.265 8.447.974 16.568 1.299 25.34 1.299 50.236 0 96.56-17.206 133.26-46.258-46.832-.975-86.185-31.188-99.675-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.828-9.797-85.417-52.628-85.417-103.766v-1.299c14.33 7.92 30.748 12.67 48.364 13.32-28.264-18.843-46.832-51.014-46.832-87.391 0-19.492 5.197-37.36 14.33-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.794-2.599-15.91-2.599-24.029 0-57.502 46.833-104.335 104.334-104.335 30.137 0 57.502 12.67 76.67 33.137 23.715-4.548 46.182-13.32 66.599-25.34-7.793 24.366-24.366 44.833-46.182 57.502 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                                                                />
-                                                            </svg>
-                                                            twitter
-                                                        </Link>
-                                                    </div>
+                                                    
                                                     <div className="bg-[#3C86AD] py-4 px-6 text-xl rounded-lg text-white">
-                                                        <Link href="#" className="flex items-center ">
+                                                        <Link href="https://www.linkedin.com/company/sarpi-spa-algerian-company-for-industrial-projects-realization-100-sonatrach-subsidiary/" className="flex items-center ">
                                                             <svg
                                                                 className="svg-inline--fa fa-linkedin-in me-3"
                                                                 aria-hidden="true"
@@ -216,16 +196,7 @@ export default async function Post({ params }: any) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="w-full py-12 px-11 bg-white dark:bg-darklight shadow-lg rounded-b-lg">
-                                                <p className="text-2xl mb-4">Join our Newsletter</p>
-                                                <input
-                                                    placeholder="Email address "
-                                                    className="p-3 dark:bg-semidark border border-border dark:border-dark_border rounded-lg mb-2 w-full focus:outline-0 focus:border-primary dark:focus:border-primary"
-                                                />
-                                                <button className="w-full py-4 px-9 text-lg font-medium bg-primary hover:bg-blue-700 rounded-lg text-white">
-                                                    Subscribe
-                                                </button>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
