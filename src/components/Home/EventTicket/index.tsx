@@ -71,7 +71,7 @@ const EventTicket = () => {
                                         </p>
                                     </div>
                                     <Link
-                                      href="/"
+                                      href="/SystemeHSE"
                                       className="btn hover-filled-slide-down w-full text-center rounded-lg overflow-hidden
                                                  bg-orange-500 hover:bg-orange-600 text-white"
                                     >

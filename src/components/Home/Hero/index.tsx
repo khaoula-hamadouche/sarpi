@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import React from 'react';
 
 const Hero = () => {
@@ -40,22 +42,22 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-4 pt-4 flex-wrap">
-               <button className="group px-8 py-4 
-                 bg-gradient-to-r from-orange-500 to-orange-600 
-                 hover:from-orange-600 hover:to-orange-700 
-                 dark:from-orange-400 dark:to-orange-500 
-                 dark:hover:from-orange-500 dark:hover:to-orange-600 
-                 text-white rounded-xl font-semibold 
-                 shadow-lg shadow-orange-500/30 
-                 hover:shadow-xl hover:shadow-orange-500/40 
-                 transition-all duration-300 hover:-translate-y-0.5">
-                 
-                 <span>En savoir plus</span>
-               </button>
+               <Link
+              href="/QuiSommesNous"
+              className="group inline-flex items-center justify-center px-8 py-4
+                bg-gradient-to-r from-orange-500 to-orange-600
+                hover:from-orange-600 hover:to-orange-700
+                dark:from-orange-400 dark:to-orange-500
+                dark:hover:from-orange-500 dark:hover:to-orange-600
+                text-white rounded-xl font-semibold
+                shadow-lg shadow-orange-500/30
+                hover:shadow-xl hover:shadow-orange-500/40
+                transition-all duration-300 hover:-translate-y-0.5
+                no-underline"
+            >
+              En savoir plus
+            </Link>
 
-              
-            </div>
           </div>
           
           {/* Right Images */}
