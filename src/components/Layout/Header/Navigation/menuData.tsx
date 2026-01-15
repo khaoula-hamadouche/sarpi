@@ -16,9 +16,9 @@ export const headerData: HeaderItem[] = [
     label: "Nos Métiers",
     href: "",
     submenu: [
-      { label: "Nos Activités", href: "" },
-      { label: "Nos Secteurs d’Intervention", href: "" },
-      { label: "Nos Ressources", href: "" },
+      { label: "Nos Activités", href: "/nosactivites" },
+      { label: "Nos Secteurs d’Intervention", href: "/secteurs" },
+      { label: "Nos Ressources", href: "/nosressources" },
     ],
   },
   {
