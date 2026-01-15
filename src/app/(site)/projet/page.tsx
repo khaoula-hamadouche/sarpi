@@ -1,28 +1,28 @@
 import React from "react";
-import BlogList from "@/components/Blog/BlogList";
+import ProjetList from "@/components/Projet/ProjetList";
 import HeroSub from "@/components/SharedComponent/HeroSub";
 import { Metadata } from "next";
 import TicketSection from "@/components/Home/TicketSection";
 export const metadata: Metadata = {
-  title: "Blog | Sarpi",
+  title: "projet ",
 };
 
-const BlogPage = () => {
+const ProjetPage = () => {
     const breadcrumbLinks = [
         { href: "/", text: "Accueil" },
-        { href: "/blog", text: "Projets realisés" },
+        { href: "/projet", text: "Projets realisés" },
     ];
     return (
         <>
             <HeroSub
-                title="Projets realisés"
-                description="Découvrez nos projets réalisés."
-                breadcrumbLinks={breadcrumbLinks}
+                title="Projets en Cours de Réalisation"
+                description="Découvrez nos projets en Cours de Réalisation."
+            
             />
-            <BlogList />
+            <ProjetList />
             <TicketSection/>
         </>
     );
 };
 
-export default BlogPage;
+export default ProjetPage;

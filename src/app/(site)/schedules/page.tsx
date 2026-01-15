@@ -10,7 +10,7 @@ import { Metadata } from "next";
 import { getServices } from "@/services/api";
 
 export const metadata: Metadata = {
-  title: "Schedules | Symposium",
+  title: "Schedules | Sarpi",
 };
 
 const Page = async () => {

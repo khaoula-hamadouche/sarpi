@@ -13,6 +13,11 @@ const nextConfig = {
     },
     env:{
         NEXT_PUBLIC_BASE_PATH:basePath
+    },
+    // Désactiver complètement les indicateurs de développement
+    devIndicators: {
+        appIsrStatus: false,
+        buildActivity: false,
     }
 };
 

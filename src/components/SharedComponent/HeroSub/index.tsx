@@ -8,7 +8,7 @@ interface HeroSubProps {
     breadcrumbLinks: BreadcrumbLink[];
 }
 
-const HeroSub: FC<HeroSubProps> = ({ title, description, breadcrumbLinks }) => {
+const HeroSub: FC<HeroSubProps> = ({ title, description }) => {
 
     return (
         <>
@@ -22,7 +22,6 @@ const HeroSub: FC<HeroSubProps> = ({ title, description, breadcrumbLinks }) => {
                             </p>
                         </div>
                         <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-                        <Breadcrumb links={breadcrumbLinks} />
                         </div>
                     </div>
                 </div>
