@@ -7,15 +7,17 @@ const EventTicket = () => {
         <>
             <section className="dark:bg-darkmode pt-0">
                 <div className="container">
-                    <div className="text-center md:pb-20 pb-8">
-                        <h2 className="pb-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Qualité et HSE</h2>
-                        <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" className="text-SlateBlueText dark:text-opacity-80 text-lg font-normal max-w-920 m-auto">
-                     
-                          SARPI est certifiée ISO 9001 V2015, ISO 14001 en sa V2015 et ISO 45001 en sa V2018 attachant
-                           la plus haute priorité aux respect des exigences légales et réglementaires et s’engage en faveur de la qualité de ses réalisations, 
-                          de la santé et sécurité des travailleurs et faisant attention à notre empreinte environnementale. 
-                        </p>
+                    <div className="text-center md:pb-20 pb-8 pt-12"> 
+                      <h2 className="pb-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        Qualité et HSE
+                      </h2>
+                      <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" className="text-SlateBlueText dark:text-opacity-80 text-lg font-normal max-w-920 m-auto">
+                        SARPI est certifiée ISO 9001 V2015, ISO 14001 en sa V2015 et ISO 45001 en sa V2018 attachant
+                        la plus haute priorité aux respect des exigences légales et réglementaires et s’engage en faveur de la qualité de ses réalisations, 
+                        de la santé et sécurité des travailleurs et faisant attention à notre empreinte environnementale. 
+                      </p>
                     </div>
+
                     <div className="flex flex-wrap items-stretch" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
                         <div className="bg-primary flex items-center justify-center lg:px-16 px-8 lg:py-0 py-8 lg:rounded-l-22 rounded-t-22 md:rounded-tr-none md:rounded-bl-22 rounded-bl-none md:w-2/4 w-full">
                             <Image
@@ -69,10 +71,11 @@ const EventTicket = () => {
                                         </p>
                                     </div>
                                     <Link
-                                        href="/"
-                                        className="btn btn-1 hover-filled-slide-down w-full text-center rounded-lg overflow-hidden"
+                                      href="/"
+                                      className="btn hover-filled-slide-down w-full text-center rounded-lg overflow-hidden
+                                                 bg-orange-500 hover:bg-orange-600 text-white"
                                     >
-                                        <span>En Savoir plus</span>
+                                      <span>En Savoir plus</span>
                                     </Link>
                                 </div>
                             </div>

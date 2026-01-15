@@ -41,9 +41,19 @@ const Hero = () => {
             </div>
             
             <div className="flex items-center gap-4 pt-4 flex-wrap">
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5">
-                <span>En savoir plus</span>
-              </button>
+               <button className="group px-8 py-4 
+                 bg-gradient-to-r from-orange-500 to-orange-600 
+                 hover:from-orange-600 hover:to-orange-700 
+                 dark:from-orange-400 dark:to-orange-500 
+                 dark:hover:from-orange-500 dark:hover:to-orange-600 
+                 text-white rounded-xl font-semibold 
+                 shadow-lg shadow-orange-500/30 
+                 hover:shadow-xl hover:shadow-orange-500/40 
+                 transition-all duration-300 hover:-translate-y-0.5">
+                 
+                 <span>En savoir plus</span>
+               </button>
+
               
             </div>
           </div>
@@ -60,7 +70,11 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-4 -left-4 bg-gradient-to-br from-yellow-400 to-orange-400 dark:from-yellow-500 dark:to-orange-500 rounded-2xl shadow-xl py-3 px-6 transform group-hover:-translate-y-1 transition-transform duration-300">
+              <div className="absolute -top-4 -left-4 
+                bg-gradient-to-br from-orange-500 to-orange-600 
+                dark:from-orange-400 dark:to-orange-500 
+                rounded-2xl shadow-xl py-3 px-6 
+                transform group-hover:-translate-y-1 transition-transform duration-300">
                 <p className="text-base font-bold text-white">Hassi R'Mel</p>
                 <p className="text-sm font-medium text-white/90 text-center">2018</p>
               </div>
@@ -76,10 +90,11 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-green-400 to-cyan-400 dark:from-green-500 dark:to-cyan-500 rounded-2xl shadow-xl py-3 px-6 transform group-hover:translate-y-1 transition-transform duration-300">
+             <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-blue-800 to-blue-600  dark:from-blue-900 dark:to-blue-700 rounded-2xl shadow-xl py-3 px-6 transform group-hover:translate-y-1 transition-transform duration-300">
                 <p className="text-base font-bold text-white">Hassi Messoud</p>
                 <p className="text-sm font-medium text-white/90 text-center">2021</p>
               </div>
+
             </div>
 
             {/* Decorative circles */}

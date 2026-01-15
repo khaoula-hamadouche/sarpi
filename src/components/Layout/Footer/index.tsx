@@ -10,7 +10,7 @@ const Footer: FC = () => {
         <div>
                         <Link href="/">
                             <Image
-                                src="/images/logo/logo.png"
+                                src="/images/logo/favicon.ico"
                                 alt="logo"
                                 width={0}
                                 height={0}
@@ -27,7 +27,7 @@ const Footer: FC = () => {
                                 <Link href="/">Accueil</Link>
                             </li>
                             <li className="text-PaleCerulean sm:text-xl text-lg font-normal transition-all duration-0.4s hover:text-primary">
-                                <Link href="/">A propos de nous</Link>
+                                <Link href="/">Notre organisation</Link>
                             </li>
                             <li className="text-PaleCerulean sm:text-xl text-lg font-normal transition-all duration-0.4s hover:text-primary">
                                 <Link href="/">Nos Métiers</Link>

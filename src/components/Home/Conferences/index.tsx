@@ -5,7 +5,11 @@ import ThumbnailCarousel from "../ThumbnailCarousel";
 const Conferences = () => {
   return (
     <>
-      <section className="bg-IcyBreeze dark:bg-darklight relative overflow-hidden before:absolute before:content-[''] before:bg-PaleSkyBlu before:dark:bg-secondary before:w-687 before:h-687 before:-bottom-1/2 before:rounded-full before:xl:inline-block before:hidden">
+<section className="bg-blue-100 dark:bg-darklight relative overflow-hidden
+  before:absolute before:content-[''] 
+  before:bg-blue-200 before:dark:bg-secondary 
+  before:w-687 before:h-687 before:-bottom-1/2 
+  before:rounded-full before:xl:inline-block before:hidden">
         <div className="container">
           <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:gap-24 gap-5">
             <div

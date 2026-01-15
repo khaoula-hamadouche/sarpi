@@ -44,14 +44,18 @@ const Testimonials = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    lazyLoad: "ondemand",
+    lazyLoad: "ondemand" as const,
     arrows: false,
     pauseOnHover: true,
   };
 
   return (
-    <section className="bg-IcyBreeze dark:bg-darklight py-20">
-      <div className="container">
+        <section className="bg-blue-100 dark:bg-darklight relative overflow-hidden
+          before:absolute before:content-[''] 
+          before:bg-blue-200 before:dark:bg-secondary 
+          before:w-687 before:h-687 before:-bottom-1/2 
+          before:rounded-full before:xl:inline-block before:hidden">      
+          <div className="container">
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index}>
@@ -77,14 +81,16 @@ const Testimonials = () => {
                   </p>
 
                   {/* Bouton Lire la suite */}
-                 <a
+                <a
                     href={slide.link}
-                    className="inline-block mt-4 px-6 py-2 border-2 border-BlueMain text-BlueMain
-                               font-medium rounded-lg hover:bg-BlueMain hover:text-white
-                               dark:border-BlueDark dark:text-BlueDark dark:hover:bg-BlueDark dark:hover:text-white
-                               transition-colors duration-300"
+                    className="inline-block mt-4 px-6 py-2 rounded-lg font-medium
+                               bg-gradient-to-r from-orange-500 to-orange-600
+                               hover:from-orange-600 hover:to-orange-700
+                               text-white shadow-lg shadow-orange-500/30
+                               hover:shadow-xl hover:shadow-orange-500/40
+                               transition-all duration-300"
                   >
-                    Lire la suite →
+                    Lire la suite
                   </a>
 
 

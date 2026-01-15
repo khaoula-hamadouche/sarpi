@@ -9,7 +9,7 @@ const WorkSpeakers = ({ showTitle = true }) => {
   const pathname = usePathname();
   return (
     <>
-      <section className={` dark:bg-darkmode ${pathname === "/" ? "" : ""}`}>
+<section className={`bg-orange-50 dark:bg-darkmode ${pathname === "/" ? "" : ""}`}>
         {showTitle && (
           <h2 className="text-center pb-12">Domaines D’intervention</h2>
         )}

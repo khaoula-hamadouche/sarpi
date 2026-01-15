@@ -9,7 +9,7 @@ import Upcoming from '@/components/Home/Upcoming';
 import Testimonials from '@/components/Home/Testimonials';
 import TicketSection from '@/components/Home/TicketSection';
 export const metadata: Metadata = {
-  title: "Symposium",
+  title: "SARPI - Accueil",
 };
 
 export default function Home() {
@@ -20,8 +20,9 @@ export default function Home() {
       <WorkSpeakers/>
       <EventTicket/>
       {/*<Highlight/>*/}
-      <Upcoming/>
       <Testimonials/>
+      <Upcoming/>
+      
       {/*<TicketSection/>*/}
     </main>
   )
