@@ -84,9 +84,9 @@ const QuiSommesNous = () => {
 
         {/* Contenu */}
         {activeTab === 'presentation' && (
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="flex justify-center items-start lg:items-start py-8">
             {/* Carte Présentation */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700 w-full max-w-4xl">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500 flex items-center justify-center overflow-hidden">
                   <Image
@@ -104,7 +104,7 @@ const QuiSommesNous = () => {
                   </p>
                 </div>
               </div>
-
+        
               <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   La Société Algérienne de Réalisation de Projets Industriels <strong className="text-blue-900 dark:text-orange-300">«SARPI»</strong> est une société par actions créée en juin 1992, en partenariat entre SONATRACH et ABB Italie. En mars 2018, SARPI est devenue filiale à 100% du Groupe SONATRACH.
@@ -114,35 +114,13 @@ const QuiSommesNous = () => {
                 </p>
                 <div className="bg-gradient-to-r from-orange-50 to-blue-50 dark:from-gray-700 dark:to-gray-800 rounded-xl p-6 border-l-4 border-orange-500 dark:border-orange-400">
                   <p className="font-medium text-blue-900 dark:text-orange-300">
-                    SARPI aspire à devenir une solution de référence pour les projets industriels, notamment être reconnue comme la référence nationale dans la réalisation des projets industriels en EPC "Engineering, Procurement, Construction".
-                  </p>
+                   SARPI aspire à devenir une solution de référence pour les projets industriels, notamment être reconnue comme la référence nationale dans la réalisation des projets industriels en EPC " Engineering, Procurement, Construction" devenant un acteur incontournable dans les stratégies de développement de notre principal client SONATRACH, pour, éventuellement exporter notre savoir-faire à l'international dans la construction des Projets Industriels.          </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Statistiques */}
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-xl p-8 text-white">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-bold">1992</h4>
-                </div>
-                <p className="text-white/90">Année de création</p>
-              </div>
-              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl shadow-xl p-8 text-white">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-bold">30+ ans</h4>
-                </div>
-                <p className="text-white/90">D'expérience avérée</p>
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border-2 border-orange-500/20 dark:border-orange-400/40">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-2xl font-bold text-orange-500 dark:text-orange-300">100%</h4>
-                </div>
-                <p className="text-gray-700 dark:text-gray-300">Filiale SONATRACH depuis 2018</p>
               </div>
             </div>
           </div>
         )}
+
         {/* Contenu - Parcours */}
         {activeTab === 'parcours' && (
           <div className="space-y-8">
