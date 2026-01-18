@@ -14,13 +14,8 @@ const ProjetPage = () => {
     ];
     return (
         <>
-            <HeroSub
-                title="Projets en Cours de Réalisation"
-                description="Découvrez nos projets en Cours de Réalisation."
-                breadcrumbLinks={breadcrumbLinks}
-            />
+  
             <ProjetList />
-            <TicketSection/>
         </>
     );
 };

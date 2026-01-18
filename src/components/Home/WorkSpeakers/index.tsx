@@ -9,7 +9,11 @@ const WorkSpeakers = ({ showTitle = true }) => {
   const pathname = usePathname();
   return (
     <>
-<section className={`bg-orange-50 dark:bg-darkmode ${pathname === "/" ? "" : ""}`}>
+<section
+  className={`relative overflow-hidden bg-gradient-to-br from-blue-100/20 via-white to-orange-600/20
+  dark:from-darkmode dark:via-gray-800 dark:to-orange-900
+  min-h-[60vh] flex flex-col items-center justify-center px-6`}
+>
         {showTitle && (
           <h2 className="text-center pb-12">Domaines D’intervention</h2>
         )}

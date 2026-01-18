@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Icon } from "@iconify/react";
 import { getAllPosts } from "@/utils/markdown";
-import ProjetCard from './ProjetCard';
+import ProjetCard from './projetCard';
 
 const Projet: React.FC = () => {
     const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]).slice(0, 3);

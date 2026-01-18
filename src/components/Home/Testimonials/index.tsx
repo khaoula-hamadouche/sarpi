@@ -50,11 +50,15 @@ const Testimonials = () => {
   };
 
   return (
-        <section className="bg-blue-100 dark:bg-darklight relative overflow-hidden
-          before:absolute before:content-[''] 
-          before:bg-blue-200 before:dark:bg-secondary 
-          before:w-687 before:h-687 before:-bottom-1/2 
-          before:rounded-full before:xl:inline-block before:hidden">      
+<section
+  className="relative overflow-hidden 
+  bg-gradient-to-br from-blue-300/30 via-blue-200/20 to-orange-600/30 
+  dark:from-blue-900/30 dark:via-gray-800 dark:to-orange-900
+  before:absolute before:content-[''] 
+  before:w-[687px] before:h-[687px] before:-bottom-1/2 
+  before:rounded-full before:bg-blue-400/20 before:dark:bg-secondary
+  before:xl:inline-block before:hidden"
+>
           <div className="container">
         <Slider {...settings}>
           {slides.map((slide, index) => (

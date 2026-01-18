@@ -4,7 +4,9 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden min-h-screen flex items-center">
+<section className="relative bg-gradient-to-br from-orange-200 via-orange-50 to-blue-900/20 
+dark:from-orange-900/20 dark:via-gray-800 dark:to-blue-900 overflow-hidden min-h-screen flex items-center">
+
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.05))]" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 dark:bg-blue-500/5 rounded-full blur-3xl" />
