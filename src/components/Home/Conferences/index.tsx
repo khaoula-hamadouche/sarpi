@@ -5,15 +5,20 @@ import ThumbnailCarousel from "../ThumbnailCarousel";
 const Conferences = () => {
   return (
     <>
-<section
+
+    <section
   className="relative overflow-hidden 
-  bg-gradient-to-br from-blue-300/30 via-blue-200/20 to-orange-600/30 
-  dark:from-blue-900/30 dark:via-gray-800 dark:to-orange-900
+  bg-gradient-to-br 
+  from-blue-800/30 via-blue-900/20 to-orange-300/25
+   dark:bg-darklight
+before:dark:bg-secondary 
   before:absolute before:content-[''] 
   before:w-[687px] before:h-[687px] before:-bottom-1/2 
-  before:rounded-full before:bg-blue-400/20 before:dark:bg-secondary
+  before:rounded-full 
+  before:bg-blue-900/15 before:dark:bg-blue-900/30
   before:xl:inline-block before:hidden"
 >
+  
         <div className="container">
           <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:gap-24 gap-5">
             <div
@@ -34,7 +39,7 @@ const Conferences = () => {
                Explorez nos réalisations majeures dans les secteurs de l’Oil & Gas, des énergies renouvelables, de l’hydraulique et de la maintenance industrielle. Chaque projet reflète notre expertise et notre engagement envers l’excellence.
              </p>
              <Link
-               href="/blog"
+               href="/projets"
                className="btn_outline btn-2 hover-outline-slide-down"
              >
                <span>Voir tous les projets</span>

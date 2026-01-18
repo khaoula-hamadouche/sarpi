@@ -10,10 +10,13 @@ const WorkSpeakers = ({ showTitle = true }) => {
   return (
     <>
 <section
-  className={`relative overflow-hidden bg-gradient-to-br from-blue-100/20 via-white to-orange-600/20
-  dark:from-darkmode dark:via-gray-800 dark:to-orange-900
+  className={`relative overflow-hidden
+  bg-gradient-to-br from-orange-200/60 via-orange-100/80 to-blue-900/20
+  dark:from-orange-900/40 dark:via-orange-800/30 dark:to-blue-900/40
   min-h-[60vh] flex flex-col items-center justify-center px-6`}
 >
+
+
         {showTitle && (
           <h2 className="text-center pb-12">Domaines D’intervention</h2>
         )}

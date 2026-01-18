@@ -4,9 +4,8 @@ import Image from "next/image";
 
 const EventTicket = () => {
     return (
-        <><section className="relative bg-gradient-to-br from-orange-50/80 via-white to-orange-100/40 
-dark:from-orange-950/10 dark:via-gray-900 dark:to-gray-800/50 
-overflow-hidden py-16 lg:py-24">
+        <>
+            <section className="dark:bg-darkmode pt-0">
                 <div className="container">
                     <div className="text-center md:pb-20 pb-8 pt-12"> 
                       <h2 className="pb-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
