@@ -81,16 +81,16 @@ export const Introduction = () => {
                         onClick={() => setDocNavbarOpen(false)} 
                     />
                 )}
+  
                <div className="text-left mb-12">
                   <h2 className="text-4xl font-bold text-blue-900 dark:text-orange-400 mb-2">
-                    Actualités  <span className="text-orange-500 dark:text-orange-300">SARPI</span>
+                    Actualités <span className="text-orange-500 dark:text-orange-300">SARPI</span>
                   </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded" />
-                           <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
-                  Restez informé(e) de nos dernières actualités et événements
-                </p>
+                  <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded mb-6" />
+                  <p className="text-lg  text-gray-700 dark:text-gray-300 leading-relaxed">
+                   Restez informé(e) de nos dernières actualités et événements
+                  </p>
                 </div>
-               
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                       {newsArticles.map((article) => (
                         <div
