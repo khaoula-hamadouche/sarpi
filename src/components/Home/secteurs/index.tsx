@@ -130,20 +130,16 @@ const SecteursIntervention = () => {
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
 
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 dark:from-white dark:via-blue-400 dark:to-white bg-clip-text text-transparent">
-              Nos Secteurs d'Intervention
-            </span>
+        <div className="text-left mb-12">
+          <h2 className="text-4xl font-bold text-blue-900 dark:text-orange-400 mb-2">
+            Nos Secteurs <span className="text-orange-500 dark:text-orange-300">d'Intervention</span>
           </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 mx-auto rounded mb-6" />
-
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded mb-6" />
+          <p className="text-lg  text-gray-700 dark:text-gray-300 leading-relaxed">
             SARPI a été maître d'ouvrage de centaines de projets pour le compte de <span className="font-semibold text-slate-800 dark:text-slate-200">SONATRACH</span> et les plus grandes firmes internationales installées en Algérie, dans plusieurs secteurs d'activités.
           </p>
         </div>
-
         {/* Secteurs Grid */}
         <div className="grid lg:grid-cols-2 gap-6">
           {secteurs.map((secteur) => {

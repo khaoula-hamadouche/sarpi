@@ -116,28 +116,27 @@ const NosRessources = () => {
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 dark:from-white dark:via-blue-400 dark:to-white bg-clip-text text-transparent">
-              Nos Ressources
-            </span>
-          </h2>
-                     <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 mx-auto rounded mb-6" />
 
-        </div>
+          <div className="text-left mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 dark:text-orange-400 mb-2">
+              Nos <span className="text-orange-500 dark:text-orange-300">Ressources</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded" />
+          </div>
 
         {/* Tabs Navigation */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+      <div className="flex justify-center mb-12">
+           <div className="w-full max-w-8xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-2 flex gap-2">
           {tabs.map((tab) => {
             const TabIcon = tab.icon;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                 className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-orange-500 to-blue-700 text-white shadow-lg scale-105'
-                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:shadow-md border border-slate-200 dark:border-slate-700'
+                    ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
+                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 <TabIcon className="w-5 h-5" />
@@ -146,6 +145,7 @@ const NosRessources = () => {
             );
           })}
         </div>
+         </div>
 
         {/* Content */}
         <div className="space-y-12">

@@ -151,20 +151,19 @@ const NosActivites = () => {
 
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-blue-900 dark:text-orange-400 mb-4">
-            Nos Activités
-          </h2>
-           <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 mx-auto rounded mb-6" />
-
-        </div>
+          <div className="text-left mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 dark:text-orange-400 mb-2">
+              Nos <span className="text-orange-500 dark:text-orange-300">Activités</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded" />
+          </div>
 
         {/* Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-2 gap-2 flex-wrap justify-center">
+                <div className="flex justify-center mb-12">
+           <div className="w-full max-w-8xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-2 flex gap-2">
             <button
               onClick={() => setActiveSection('domaines')}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeSection === 'domaines'
                   ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
@@ -177,7 +176,7 @@ const NosActivites = () => {
             </button>
             <button
               onClick={() => setActiveSection('engineering')}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeSection === 'engineering'
                   ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
@@ -190,7 +189,7 @@ const NosActivites = () => {
             </button>
             <button
               onClick={() => setActiveSection('procurement')}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+             className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeSection === 'procurement'
                   ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
                   : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
