@@ -34,7 +34,7 @@ const Conferences = () => {
                Explorez nos réalisations majeures dans les secteurs de l’Oil & Gas, des énergies renouvelables, de l’hydraulique et de la maintenance industrielle. Chaque projet reflète notre expertise et notre engagement envers l’excellence.
              </p>
              <Link
-               href="/projets"
+               href="/blog"
                className="btn_outline btn-2 hover-outline-slide-down"
              >
                <span>Voir tous les projets</span>

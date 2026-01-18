@@ -10,6 +10,7 @@ import Testimonials from '@/components/Home/Testimonials';
 import TicketSection from '@/components/Home/TicketSection';
 export const metadata: Metadata = {
   title: "SARPI - Accueil",
+  icons: "/favicon.ico",
 };
 
 export default function Home() {

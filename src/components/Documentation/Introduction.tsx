@@ -82,66 +82,83 @@ export const Introduction = () => {
                     />
                 )}
 
-                <div className="flex items-center justify-between mb-8">
-                    <div>
-                        <h3 className="text-MidnightNavyText text-3xl font-bold mb-2 dark:text-white">
-                            Actualités SARPI
-                        </h3>
-                        <p className="text-base text-SlateBlueText dark:text-opacity-80">
-                            Restez informé(e) de nos dernières actualités et événements
-                        </p>
-                    </div>
-                    <button 
-                        onClick={() => setDocNavbarOpen(true)} 
-                        className="p-2 lg:hidden hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                        aria-label="Ouvrir le menu"
-                    >
-                        <Icon icon="gg:menu-right" className="text-3xl" />
-                    </button>
+              
+                <div className="max-w-7xl mx-auto mb-16">
+                     <h1 className="text-4xl md:text-5xl font-bold text-blue-900 dark:text-orange-400 mb-3">
+                      Actualités  <span className="text-orange-500 dark:text-orange-300">SARPI</span>
+                     </h1>
+                     <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded" />
+                     <p className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300">
+                       Découvrez nos dernières actualités et événements.
+                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    {newsArticles.map((article) => (
-                        <Link 
-                            key={article.id}
-                            href={article.link}
-                            className="group block bg-white dark:bg-darkmode border border-border dark:border-dark_border rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                      {newsArticles.map((article) => (
+                        <div
+                          key={article.id}
+                          className="group relative h-full"
                         >
-                            <div className="relative h-48 overflow-hidden">
+                          {/* Border gradient arrondi */}
+                          <div className="p-[1.5px] rounded-2xl bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 h-full">
+                            <Link 
+                              href={article.link}
+                              className="block bg-white dark:bg-darkmode rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col"
+                            >
+                              <div className="relative h-48 overflow-hidden">
                                 <Image
-                                    src={article.img}
-                                    alt={article.title}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                  src={article.img}
+                                  alt={article.title}
+                                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute top-4 left-4">
-                                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                                        {article.category}
-                                    </span>
+                                  <span className="  bg-gradient-to-r from-orange-500 to-orange-600
+                                    hover:from-orange-600 hover:to-orange-700
+                                    dark:from-orange-400 dark:to-orange-500
+                                    dark:hover:from-orange-500 dark:hover:to-orange-600
+                                    text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                    {article.category}
+                                  </span>
                                 </div>
-                            </div>
-                            
-                            <div className="p-5">
+                              </div>
+                    
+                              <div className="p-5 flex flex-col flex-grow">
                                 <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
-                                    <Icon icon="mdi:calendar-outline" className="text-lg" />
-                                    <span>{article.date}</span>
+                                  <Icon icon="mdi:calendar-outline" className="text-lg" />
+                                  <span>{article.date}</span>
                                 </div>
                                 
                                 <h4 className="text-lg font-bold text-MidnightNavyText dark:text-white mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                    {article.title}
+                                  {article.title}
                                 </h4>
                                 
                                 <p className="text-sm text-SlateBlueText dark:text-opacity-80 mb-4 line-clamp-2">
-                                    {article.excerpt}
+                                  {article.excerpt}
                                 </p>
                                 
-                                <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all">
-                                    <span>Lire la suite</span>
-                                    <Icon icon="mdi:arrow-right" className="text-lg" />
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+                               <div className="group inline-flex items-center justify-center px-6 py-3
+    bg-gradient-to-r from-orange-500 to-orange-600
+    hover:from-orange-600 hover:to-orange-700
+    dark:from-orange-400 dark:to-orange-500
+    dark:hover:from-orange-500 dark:hover:to-orange-600
+    text-white text-sm rounded-xl font-semibold
+    shadow-lg shadow-orange-500/30
+    hover:shadow-xl hover:shadow-orange-500/40
+    transition-all duration-300 hover:-translate-y-0.5
+    no-underline
+    mx-auto">
+  <span>Lire la suite</span>
+</div>
+
+                                
+
+                              </div>
+                            </Link>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
 
                 
             </div>
