@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import Image from 'next/image';
 
 const QuiSommesNous = () => {
   const [activeTab, setActiveTab] = useState('presentation');
@@ -48,79 +47,72 @@ const QuiSommesNous = () => {
   ];
 
   return (
-<section className="relative bg-gradient-to-br 
-from-slate-50 via-white to-orange-100/40
-dark:from-gray-800 dark:via-gray-900 dark:to-blue-900/20
-pt-32 pb-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-50 via-white to-orange-100/40 dark:from-gray-800 dark:via-gray-900 dark:to-blue-900/20 pt-32 pb-20 overflow-hidden">
       {/* Décorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 dark:bg-orange-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/5 dark:bg-blue-700/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-<h2 className="text-5xl font-bold text-blue-900 dark:text-orange-400 mb-4">
-  Qui <span className="text-orange-500 dark:text-orange-300">Sommes-Nous</span> ?
-</h2>
-
-
-          <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 mx-auto rounded" />
-        </div>
-        
+        {/* Header - Aligné à gauche */}
+  
+          <div className="text-left mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 dark:text-orange-400 mb-2">
+              Qui <span className="text-orange-500 dark:text-orange-300">Sommes-Nous</span>?
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded" />
+          </div>
 
         {/* Onglets */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-2 gap-2">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => setActiveTab(section.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  activeTab === section.id
-                    ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
-                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                }`}
-              >
-                {section.icon}
-                <span>{section.title}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+        
+    <div className="flex justify-center mb-12">
+  <div className="w-full max-w-8xl bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-2 flex gap-2">
+    {sections.map((section) => (
+      <button
+        key={section.id}
+        onClick={() => setActiveTab(section.id)}
+        className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300 ${
+          activeTab === section.id
+            ? 'bg-gradient-to-r from-orange-500 to-blue-900 text-white shadow-lg dark:from-orange-400 dark:to-blue-700'
+            : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+        }`}
+      >
+        {section.icon}
+        <span>{section.title}</span>
+      </button>
+    ))}
+  </div>
+</div>
 
-        {/* Contenu */}
+
+        {/* Contenu - Présentation */}
         {activeTab === 'presentation' && (
           <div className="flex justify-center items-start lg:items-start py-8">
-            {/* Carte Présentation */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700 w-full max-w-4xl">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500 flex items-center justify-center overflow-hidden">
-                  <Image
-                    src="/images/logo/logo-sarpi.png"
-                    alt="Logo SARPI"
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-10 border-2 border-orange-200 dark:border-orange-700/30 w-full max-w-8xl">
+              <div className="flex items-start gap-6 mb-8 pb-6 border-b-2 border-orange-100 dark:border-gray-700">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500 flex items-center justify-center shadow-lg flex-shrink-0">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-900 dark:text-orange-300 mb-2">Présentation SARPI</h3>
-                  <p className="text-sm text-orange-500 dark:text-orange-400 font-medium">
+                  <h3 className="text-3xl font-bold text-blue-900 dark:text-orange-300 mb-3">Présentation SARPI</h3>
+                  <p className="text-base text-orange-500 dark:text-orange-400 font-semibold">
                     Société Algérienne de Réalisation de Projets Industriels
                   </p>
                 </div>
               </div>
         
-              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                 <p>
                   La Société Algérienne de Réalisation de Projets Industriels <strong className="text-blue-900 dark:text-orange-300">«SARPI»</strong> est une société par actions créée en juin 1992, en partenariat entre SONATRACH et ABB Italie. En mars 2018, SARPI est devenue filiale à 100% du Groupe SONATRACH.
                 </p>
                 <p>
                   Active depuis plus de 30 ans, SARPI a capitalisé une expérience avérée et a développé des compétences et un savoir-faire remarquable dans le domaine de la réalisation des projets industriels.
                 </p>
-                <div className="bg-gradient-to-r from-orange-50 to-blue-50 dark:from-gray-700 dark:to-gray-800 rounded-xl p-6 border-l-4 border-orange-500 dark:border-orange-400">
-                  <p className="font-medium text-blue-900 dark:text-orange-300">
-                   SARPI aspire à devenir une solution de référence pour les projets industriels, notamment être reconnue comme la référence nationale dans la réalisation des projets industriels en EPC " Engineering, Procurement, Construction" devenant un acteur incontournable dans les stratégies de développement de notre principal client SONATRACH, pour, éventuellement exporter notre savoir-faire à l'international dans la construction des Projets Industriels.          </p>
+                <div className="bg-gradient-to-r from-orange-50 to-blue-50 dark:from-gray-700 dark:to-gray-800 rounded-2xl p-8 border-l-4 border-orange-500 dark:border-orange-400 shadow-md">
+                  <p className="font-medium text-blue-900 dark:text-orange-300 text-lg">
+                   SARPI aspire à devenir une solution de référence pour les projets industriels, notamment être reconnue comme la référence nationale dans la réalisation des projets industriels en EPC "Engineering, Procurement, Construction" devenant un acteur incontournable dans les stratégies de développement de notre principal client SONATRACH, pour, éventuellement exporter notre savoir-faire à l'international dans la construction des Projets Industriels.
+                  </p>
                 </div>
               </div>
             </div>
@@ -131,19 +123,11 @@ pt-32 pb-20 overflow-hidden">
         {activeTab === 'parcours' && (
           <div className="space-y-8">
             <div className="relative">
-              {/* Ligne de temps verticale */}
-              <div className="absolute left-8 top-0 bottom-0 w-1 
-                              bg-gradient-to-b 
-                              from-orange-500 via-blue-900 to-orange-500
-                              dark:from-orange-400 dark:via-blue-700 dark:to-orange-400
-                              rounded" />
+              <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 via-blue-900 to-orange-500 dark:from-orange-400 dark:via-blue-700 dark:to-orange-400 rounded" />
         
-              {/* Étapes */}
               <div className="space-y-12">
-                {/* Étape 1 */}
                 <div className="relative flex gap-8 items-start">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600
-                                  flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg z-10">
                     <span className="text-white font-bold text-xl">1</span>
                   </div>
                   <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
@@ -156,10 +140,8 @@ pt-32 pb-20 overflow-hidden">
                   </div>
                 </div>
         
-                {/* Étape 2 */}
                 <div className="relative flex gap-8 items-start">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-900 to-blue-800
-                                  flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-900 to-blue-800 flex items-center justify-center flex-shrink-0 shadow-lg z-10">
                     <span className="text-white font-bold text-xl">2</span>
                   </div>
                   <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
@@ -173,10 +155,8 @@ pt-32 pb-20 overflow-hidden">
                   </div>
                 </div>
         
-                {/* Étape 3 */}
                 <div className="relative flex gap-8 items-start">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600
-                                  flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg z-10">
                     <span className="text-white font-bold text-xl">3</span>
                   </div>
                   <div className="flex-1 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
@@ -189,16 +169,13 @@ pt-32 pb-20 overflow-hidden">
                   </div>
                 </div>
         
-                {/* Étape 4 */}
                 <div className="relative flex gap-8 items-start">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-900 to-blue-800
-                                  flex items-center justify-center flex-shrink-0 shadow-lg z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-900 to-blue-800 flex items-center justify-center flex-shrink-0 shadow-lg z-10">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <div className="flex-1 bg-gradient-to-br from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 
-                                  rounded-2xl shadow-xl p-8 text-white">
+                  <div className="flex-1 bg-gradient-to-br from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 rounded-2xl shadow-xl p-8 text-white">
                     <h3 className="text-2xl font-bold mb-4">Évolution continue</h3>
                     <p className="text-white/90 leading-relaxed">
                       SARPI capitalise aujourd'hui une expérience avérée dans le secteur de l'énergie, ayant réalisé de nombreux projets pour SONATRACH et des firmes internationales.
@@ -210,6 +187,7 @@ pt-32 pb-20 overflow-hidden">
           </div>
         )}
 
+        {/* Contenu - Sites */}
         {activeTab === 'sites' && (
           <div className="space-y-8">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700 text-center">
