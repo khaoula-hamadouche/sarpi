@@ -50,7 +50,7 @@ export default function ALGEST2023Page() {
             </div>
 
             {/* Contenu Principal */}
-            <div className="max-w-5xl mx-auto px-4 md:px-6 py-16 relative z-10">
+            <div className="max-w-5xl mx-auto px-4 md:px-6 pb-16 relative z-10">
                 <article className="bg-gradient-to-br from-white to-orange-50/50 dark:from-gray-800 dark:to-blue-900/20 rounded-3xl shadow-2xl border-2 border-orange-200/50 dark:border-orange-800/30 overflow-hidden">
                     {/* Header de l'article */}
                     <div className="bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 p-8 relative overflow-hidden">
@@ -148,7 +148,7 @@ export default function ALGEST2023Page() {
                         </div>
 
                         {/* Bouton PDF */}
-                        <div className="mt-10 pt-8 border-t-2 border-orange-200/50 dark:border-orange-800/30">
+                        <div className="mt-10 pt-8 border-t-2 border-orange-200/50 dark:border-orange-800/30 flex justify-center">
                             <a
                                 href="/pdfs/07-SARPI-NEWS-ALGEST_compressed.pdf"
                                 target="_blank"
