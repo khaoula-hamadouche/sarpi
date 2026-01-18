@@ -48,7 +48,10 @@ const QuiSommesNous = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50 pt-32 pb-20 overflow-hidden dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20">
+<section className="relative bg-gradient-to-br 
+from-slate-50 via-white to-orange-100/40
+dark:from-gray-800 dark:via-gray-900 dark:to-blue-900/20
+pt-32 pb-20 overflow-hidden">
       {/* Décorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 dark:bg-orange-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/5 dark:bg-blue-700/10 rounded-full blur-3xl" />
@@ -56,11 +59,14 @@ const QuiSommesNous = () => {
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-blue-900 dark:text-orange-400 mb-4">
-            Qui Sommes-Nous ?
-          </h2>
+<h2 className="text-5xl font-bold text-blue-900 dark:text-orange-400 mb-4">
+  Qui <span className="text-orange-500 dark:text-orange-300">Sommes-Nous</span> ?
+</h2>
+
+
           <div className="w-32 h-1 bg-gradient-to-r from-orange-500 to-blue-900 dark:from-orange-400 dark:to-blue-700 mx-auto rounded" />
         </div>
+        
 
         {/* Onglets */}
         <div className="flex justify-center mb-12">

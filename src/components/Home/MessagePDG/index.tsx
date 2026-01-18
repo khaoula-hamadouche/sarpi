@@ -21,7 +21,10 @@ Nous poursuivons notre engagement en matière de modernisation des méthodes man
 Merci pour votre confiance et votre soutien continus.`;
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-white to-orange-50/30 dark:from-gray-800 dark:via-gray-900 dark:to-blue-900/20 py-20 overflow-hidden pt-32 pb-20 ">
+<section className="relative bg-gradient-to-br 
+from-slate-50 via-white to-orange-100/40
+dark:from-gray-800 dark:via-gray-900 dark:to-blue-900/20
+py-20 overflow-hidden pt-32 pb-20">
       {/* Motifs décoratifs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 dark:bg-orange-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/5 dark:bg-blue-700/10 rounded-full blur-3xl" />
@@ -97,19 +100,31 @@ Merci pour votre confiance et votre soutien continus.`;
 
             {/* Message PDG - Droite */}
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line text-justify">
-                  {message}
-                </p>
-
-
-                {/* Signature */}
-                <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-600">
-                  <p className="text-blue-900 dark:text-orange-400 font-bold text-lg">Le Président Directeur Général</p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">SARPI Spa</p>
+              {/* Bordure dégradée */}
+              <div className="relative p-[2px] rounded-2xl 
+                bg-gradient-to-br from-orange-500 to-blue-900
+                dark:from-orange-400 dark:to-blue-700
+                shadow-xl">
+            
+                {/* Carte */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line text-justify">
+                    {message}
+                  </p>
+            
+                  {/* Signature */}
+                  <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-600">
+                    <p className="text-blue-900 dark:text-orange-400 font-bold text-lg">
+                      Le Président Directeur Général
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                      SARPI Spa
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
