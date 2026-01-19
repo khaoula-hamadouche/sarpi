@@ -16,15 +16,9 @@ const page = () => {
   ];
   return (
     <>
-      <HeroSub
-        title="Contactez-nous"
-        description="Pour toute information, demande de renseignement ou collaboration, n’hésitez pas à nous contacter. Notre équipe est à votre écoute."
-        breadcrumbLinks={breadcrumbLinks}
-      />
+
       <ContactInfo />
-      <ContactForm />
-      <Location />
-      <TicketSection/>
+
     </>
   );
 };

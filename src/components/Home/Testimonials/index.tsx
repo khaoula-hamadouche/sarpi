@@ -13,25 +13,25 @@ const slides = [
     title: "SARPI présente à la FPA 2023",
     image: "/images/media/fpa.jpg",
     text: "SARPI a participé à la 31ᵉ édition de la Foire de la Production Algérienne (FPA 2023), un événement majeur dédié à la promotion de l’entreprise productrice.",
-    link: "/actualites/fpa-2023"
+    link: "/documentation/fpa-2023"
   },
   {
     title: "Convention d’assurance SARPI – CASH Assurances",
     image: "/images/media/cash.jpg",
     text: "SARPI et CASH Assurances ont signé une convention globale visant à renforcer la gestion des risques et la couverture assurantielle des projets.",
-    link: "/actualites/convention-assurance"
+    link: "/documentation/convention-cash-assurances"
   },
   {
     title: "SARPI au NAPEC 2023",
     image: "/images/media/north.jpg",
     text: "SARPI a pris part à la 11ᵉ édition du NAPEC 2023 à Oran, un rendez-vous international majeur du secteur de l’énergie.",
-    link: "/actualites/napec-2023"
+    link: "/documentation/napec-2023"
   },
   {
     title: "SARPI à l’ALGEST 2023",
     image: "/images/media/Salon.jpg",
     text: "SARPI a participé à la 8ᵉ édition du Salon International de la Sous-Traitance Industrielle (ALGEST 2023), dédiée aux partenariats industriels.",
-    link: "/actualites/algest-2023"
+    link: "/documentation/algest-2023"
   }
 ];
 
