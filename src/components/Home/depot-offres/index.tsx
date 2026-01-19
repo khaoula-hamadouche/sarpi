@@ -43,7 +43,11 @@ const DepotOffres = () => {
   };
 
   const handleSubmit = () => {
-   
+    // Vérifier qu'au moins un fichier est uploadé
+    if (!files.word && !files.pdf && !files.excel) {
+      alert('Veuillez déposer au moins un fichier');
+      return;
+    }
 
     setIsSubmitted(true);
     setTimeout(() => {
