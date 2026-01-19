@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props) {
 
     if (post) {
         const metadata = {
-            title: `${post.title || "Single Post Page"} | ${siteName}`,
+            title: `${post.title || "SARPI"} | ${siteName}`,
             author: authorName,
             robots: {
                 index: true,

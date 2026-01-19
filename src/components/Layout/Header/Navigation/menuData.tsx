@@ -31,5 +31,13 @@ export const headerData: HeaderItem[] = [
     ],
   },
   { label: "Actualités", href: "/documentation" },
+  {
+    label: "Partenaires", 
+    href: "",
+    submenu: [
+      { label: "Dépôt d'Offres de Services", href: "/depot-offres" },
+      { label: "Carrière​", href: "/recrutement" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];  

@@ -85,6 +85,12 @@ const ImprovedFooter = () => {
                   Actualités
                 </a>
               </li>
+                <li>
+                <a href="/contact" className="text-gray-300 hover:text-orange-400 transition-colors flex items-center gap-2 group text-sm">
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -120,11 +126,18 @@ const ImprovedFooter = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-orange-400 transition-colors flex items-center gap-2 group text-sm">
+                <a href="/carriere" className="text-gray-300 hover:text-orange-400 transition-colors flex items-center gap-2 group text-sm">
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  Contact
+                  Carrière
                 </a>
               </li>
+              <li>
+                <a href="/depot-offres" className="text-gray-300 hover:text-orange-400 transition-colors flex items-center gap-2 group text-sm">
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Dépôt d'Offres
+                </a>
+              </li>
+            
             </ul>
           </div>
 
