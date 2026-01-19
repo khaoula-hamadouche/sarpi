@@ -1,7 +1,8 @@
+@import "@/Style/style.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@/Style/style.css";
 
 html {
   scroll-behavior: smooth;
@@ -63,8 +64,6 @@ body {
   .btn.hover-filled-slide-down:hover::before {
     @apply h-0;
   }
-  /* Button Hover End */
-
   /* Outline Primary Button Hover */
   .btn_outline {
     @apply relative inline-block bg-transparent border-none cursor-pointer before:absolute before:content-[''] after:absolute after:content-[''];
