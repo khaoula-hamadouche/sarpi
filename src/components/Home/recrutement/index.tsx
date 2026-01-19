@@ -10,13 +10,13 @@ const Carriere = () => {
     domaine: ""
   });
   
-  const [files, setFiles] = useState({
+  const [files, setFiles] = useState<Record<string, File | null>>({
     diplome: null,
     cv: null
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Record<string, string | null>>({});
 
   const domaines = [
     "Juridique",
@@ -29,7 +29,7 @@ const Carriere = () => {
     "Affaires Générales (Moyens Généraux, Assurance ...)"
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     if (errors[name]) {
@@ -37,8 +37,8 @@ const Carriere = () => {
     }
   };
 
-  const handleFileChange = (e, type) => {
-    const file = e.target.files[0];
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: any) => {
+    const file = e.target.files?.[0];
     if (file) {
       // Validation du type PDF uniquement
       if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
@@ -58,7 +58,7 @@ const Carriere = () => {
   };
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors: Record<string, string> = {};
     
     if (!formData.nom.trim()) newErrors.nom = "Le nom est requis";
     if (!formData.prenom.trim()) newErrors.prenom = "Le prénom est requis";
@@ -86,7 +86,7 @@ const Carriere = () => {
     }
   };
 
-  const FileUploadSection = ({ type, icon: Icon, label }) => (
+  const FileUploadSection = ({ type, icon: Icon, label }: { type: string; icon: React.ComponentType<any>; label: string }) => (
     <div className="space-y-2">
       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
         {label} *

@@ -9,10 +9,10 @@ const DepotOffres = () => {
     excel: null
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{word?: string | null; pdf?: string | null; excel?: string | null}>({});
 
-  const handleFileChange = (e, type) => {
-    const file = e.target.files[0];
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: keyof typeof files) => {
+    const file = e.target.files?.[0];
     if (file) {
       // Validation des types de fichiers
       const validTypes = {
@@ -21,8 +21,8 @@ const DepotOffres = () => {
         excel: ['.xls', '.xlsx', 'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']
       };
 
-      const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
-      const isValid = validTypes[type].some(validType => 
+      const fileExtension = '.' + (file.name.split('.').pop() ?? '').toLowerCase();
+      const isValid = validTypes[type as keyof typeof validTypes].some(validType => 
         validType === fileExtension || validType === file.type
       );
 
@@ -56,7 +56,7 @@ const DepotOffres = () => {
     }, 3000);
   };
 
-  const FileUploadCard = ({ type, icon: Icon, label, accept }) => (
+  const FileUploadCard = ({ type, icon: Icon, label, accept }: { type: keyof typeof files; icon: React.ComponentType<{ className?: string }>; label: string; accept: string }) => (
     <div className="p-[2px] bg-gradient-to-br from-orange-500 to-blue-900 rounded-2xl">
       <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
         <div className="flex items-center gap-3 mb-4">
@@ -95,10 +95,10 @@ const DepotOffres = () => {
               <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-green-900 dark:text-green-300 truncate">
-                  {files[type].name}
+                  {(files[type] as File)?.name}
                 </p>
                 <p className="text-xs text-green-700 dark:text-green-400">
-                  {(files[type].size / 1024).toFixed(2)} KB
+                  {((files[type] as File)?.size / 1024).toFixed(2)} KB
                 </p>
               </div>
               <button
